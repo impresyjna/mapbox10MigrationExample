@@ -1,0 +1,11 @@
+build_release.sh
+/.project
+ProtocolBuffers/*.swift
+DerivedData
+yanosik/yanosik.xcodeproj/xcuserdata
+yanosik.xcworkspace/xcuserdata
+yanosik.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+*.orig
+.DS_Store
+Credits.plist
+*.mdb
