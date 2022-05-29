@@ -18,6 +18,7 @@
 		FAEC54E42843B63700575780 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = FAEC54E32843B63700575780 /* MapboxMaps */; };
 		FAEC54F02843B73700575780 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */; };
 		FAEC54F22843B73700575780 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC54EF2843B73700575780 /* Mapbox.framework */; };
+		FAEC54F62843BBB500575780 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC54F52843BBB500575780 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		FAEC54E62843B69E00575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = mapbox10MigrationExample/MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		FAEC54EF2843B73700575780 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
+		FAEC54F52843BBB500575780 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				FAB9C1E1284150F000209B1A /* Info.plist */,
 				FAB9C1E728416CB200209B1A /* OldMapViewController.swift */,
 				FAB9C1E928416CBB00209B1A /* NewMapViewController.swift */,
+				FAEC54F52843BBB500575780 /* LocationService.swift */,
 			);
 			path = mapbox10MigrationExample;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				FAB9C1EA28416CBB00209B1A /* NewMapViewController.swift in Sources */,
 				FAB9C1E828416CB200209B1A /* OldMapViewController.swift in Sources */,
 				FAB9C1D4284150ED00209B1A /* AppDelegate.swift in Sources */,
+				FAEC54F62843BBB500575780 /* LocationService.swift in Sources */,
 				FAB9C1D6284150ED00209B1A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
