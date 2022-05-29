@@ -13,7 +13,24 @@
 		FAB9C1DB284150ED00209B1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB9C1D9284150ED00209B1A /* Main.storyboard */; };
 		FAB9C1DD284150F000209B1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB9C1DC284150F000209B1A /* Assets.xcassets */; };
 		FAB9C1E0284150F000209B1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB9C1DE284150F000209B1A /* LaunchScreen.storyboard */; };
+		FAB9C1E828416CB200209B1A /* OldMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9C1E728416CB200209B1A /* OldMapViewController.swift */; };
+		FAB9C1EA28416CBB00209B1A /* NewMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9C1E928416CBB00209B1A /* NewMapViewController.swift */; };
+		FAEC54E42843B63700575780 /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = FAEC54E32843B63700575780 /* MapboxMaps */; };
+		FAEC54F02843B73700575780 /* MapboxMobileEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */; };
+		FAEC54F22843B73700575780 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAEC54EF2843B73700575780 /* Mapbox.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAEC54EC2843B6B300575780 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FAB9C1D0284150ED00209B1A /* mapbox10MigrationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mapbox10MigrationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +41,14 @@
 		FAB9C1DC284150F000209B1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB9C1DF284150F000209B1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB9C1E1284150F000209B1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB9C1E728416CB200209B1A /* OldMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldMapViewController.swift; sourceTree = "<group>"; };
+		FAB9C1E928416CBB00209B1A /* NewMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMapViewController.swift; sourceTree = "<group>"; };
+		FAEC54DA2843B41200575780 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../yanosik-swift/yanosik/Frameworks/Mapbox.framework"; sourceTree = "<group>"; };
+		FAEC54DB2843B41200575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = "../yanosik-swift/yanosik/Frameworks/MapboxMobileEvents.framework"; sourceTree = "<group>"; };
+		FAEC54E52843B69E00575780 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = mapbox10MigrationExample/Mapbox.framework; sourceTree = "<group>"; };
+		FAEC54E62843B69E00575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapboxMobileEvents.framework; path = mapbox10MigrationExample/MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
+		FAEC54EF2843B73700575780 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEC54F02843B73700575780 /* MapboxMobileEvents.framework in Frameworks */,
+				FAEC54E42843B63700575780 /* MapboxMaps in Frameworks */,
+				FAEC54F22843B73700575780 /* Mapbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +70,7 @@
 			children = (
 				FAB9C1D2284150ED00209B1A /* mapbox10MigrationExample */,
 				FAB9C1D1284150ED00209B1A /* Products */,
+				FAEC54D92843B41100575780 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +92,23 @@
 				FAB9C1DC284150F000209B1A /* Assets.xcassets */,
 				FAB9C1DE284150F000209B1A /* LaunchScreen.storyboard */,
 				FAB9C1E1284150F000209B1A /* Info.plist */,
+				FAB9C1E728416CB200209B1A /* OldMapViewController.swift */,
+				FAB9C1E928416CBB00209B1A /* NewMapViewController.swift */,
 			);
 			path = mapbox10MigrationExample;
+			sourceTree = "<group>";
+		};
+		FAEC54D92843B41100575780 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAEC54EF2843B73700575780 /* Mapbox.framework */,
+				FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */,
+				FAEC54E52843B69E00575780 /* Mapbox.framework */,
+				FAEC54E62843B69E00575780 /* MapboxMobileEvents.framework */,
+				FAEC54DA2843B41200575780 /* Mapbox.framework */,
+				FAEC54DB2843B41200575780 /* MapboxMobileEvents.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +121,17 @@
 				FAB9C1CC284150ED00209B1A /* Sources */,
 				FAB9C1CD284150ED00209B1A /* Frameworks */,
 				FAB9C1CE284150ED00209B1A /* Resources */,
+				FAEC54EC2843B6B300575780 /* CopyFiles */,
+				FAEC54ED2843B6B800575780 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = mapbox10MigrationExample;
+			packageProductDependencies = (
+				FAEC54E32843B63700575780 /* MapboxMaps */,
+			);
 			productName = mapbox10MigrationExample;
 			productReference = FAB9C1D0284150ED00209B1A /* mapbox10MigrationExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = FAB9C1C7284150ED00209B1A;
+			packageReferences = (
+				FAEC54E22843B63700575780 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = FAB9C1D1284150ED00209B1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,12 +185,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		FAEC54ED2843B6B800575780 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Mapbox.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Mapbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FAB9C1CC284150ED00209B1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FAB9C1D8284150ED00209B1A /* ViewController.swift in Sources */,
+				FAB9C1EA28416CBB00209B1A /* NewMapViewController.swift in Sources */,
+				FAB9C1E828416CB200209B1A /* OldMapViewController.swift in Sources */,
 				FAB9C1D4284150ED00209B1A /* AppDelegate.swift in Sources */,
 				FAB9C1D6284150ED00209B1A /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +364,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mapbox10MigrationExample",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mapbox10MigrationExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -314,6 +396,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/mapbox10MigrationExample",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mapbox10MigrationExample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -356,6 +443,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAEC54E22843B63700575780 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAEC54E32843B63700575780 /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAEC54E22843B63700575780 /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAB9C1C8284150ED00209B1A /* Project object */;
 }

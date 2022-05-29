@@ -5,6 +5,211 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>0280AAED-7A46-485A-A2A4-F62854AB9931</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>0280AAED-7A46-485A-A2A4-F62854AB9931.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526303.72599101</real>
+			<key>timeStoppedRecording</key>
+			<real>675526304.51588202</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>0280AAED-7A46-485A-A2A4-F62854AB9931</string>
+		</dict>
+		<key>036378B4-C2D9-47ED-8815-CBBC3BE01DCE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>036378B4-C2D9-47ED-8815-CBBC3BE01DCE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526459.89551103</real>
+			<key>timeStoppedRecording</key>
+			<real>675526466.67385602</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>036378B4-C2D9-47ED-8815-CBBC3BE01DCE</string>
+		</dict>
+		<key>1D6BA726-01BE-48D3-A482-A692C5141C32</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1D6BA726-01BE-48D3-A482-A692C5141C32.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526375.84156001</real>
+			<key>timeStoppedRecording</key>
+			<real>675526376.61969805</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>1D6BA726-01BE-48D3-A482-A692C5141C32</string>
+		</dict>
+		<key>ADFB37FC-227E-4339-8E64-BA602A417936</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>ADFB37FC-227E-4339-8E64-BA602A417936.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526207.28767896</real>
+			<key>timeStoppedRecording</key>
+			<real>675526223.61028302</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>ADFB37FC-227E-4339-8E64-BA602A417936</string>
+		</dict>
+		<key>B2889471-F5E5-423C-906A-81D6774AEB80</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>B2889471-F5E5-423C-906A-81D6774AEB80.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526239.69492602</real>
+			<key>timeStoppedRecording</key>
+			<real>675526240.60138404</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>B2889471-F5E5-423C-906A-81D6774AEB80</string>
+		</dict>
+		<key>C7E5715B-C5FE-4134-832A-B1991108655F</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C7E5715B-C5FE-4134-832A-B1991108655F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>mapbox10MigrationExample project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>mapbox10MigrationExample</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>timeStartedRecording</key>
+			<real>675526385.43966496</real>
+			<key>timeStoppedRecording</key>
+			<real>675526389.19277704</real>
+			<key>title</key>
+			<string>Build mapbox10MigrationExample</string>
+			<key>uniqueIdentifier</key>
+			<string>C7E5715B-C5FE-4134-832A-B1991108655F</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
