@@ -21,6 +21,7 @@
 		FAEC54F62843BBB500575780 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC54F52843BBB500575780 /* LocationService.swift */; };
 		FAEC54F928441F1B00575780 /* MapboxCoreNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FAEC54F828441F1B00575780 /* MapboxCoreNavigation */; };
 		FAEC54FB28441F1B00575780 /* MapboxNavigation in Frameworks */ = {isa = PBXBuildFile; productRef = FAEC54FA28441F1B00575780 /* MapboxNavigation */; };
+		FAEC54FD2844218C00575780 /* CustomLocationProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEC54FC2844218C00575780 /* CustomLocationProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		FAEC54EE2843B73700575780 /* MapboxMobileEvents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapboxMobileEvents.framework; sourceTree = "<group>"; };
 		FAEC54EF2843B73700575780 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Mapbox.framework; sourceTree = "<group>"; };
 		FAEC54F52843BBB500575780 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		FAEC54FC2844218C00575780 /* CustomLocationProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLocationProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				FAB9C1E728416CB200209B1A /* OldMapViewController.swift */,
 				FAB9C1E928416CBB00209B1A /* NewMapViewController.swift */,
 				FAEC54F52843BBB500575780 /* LocationService.swift */,
+				FAEC54FC2844218C00575780 /* CustomLocationProvider.swift */,
 			);
 			path = mapbox10MigrationExample;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				FAB9C1D8284150ED00209B1A /* ViewController.swift in Sources */,
 				FAB9C1EA28416CBB00209B1A /* NewMapViewController.swift in Sources */,
+				FAEC54FD2844218C00575780 /* CustomLocationProvider.swift in Sources */,
 				FAB9C1E828416CB200209B1A /* OldMapViewController.swift in Sources */,
 				FAB9C1D4284150ED00209B1A /* AppDelegate.swift in Sources */,
 				FAEC54F62843BBB500575780 /* LocationService.swift in Sources */,
