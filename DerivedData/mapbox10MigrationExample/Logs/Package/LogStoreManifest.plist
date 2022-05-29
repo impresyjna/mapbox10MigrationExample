@@ -34,6 +34,34 @@
 			<key>uniqueIdentifier</key>
 			<string>4491B816-6AF3-4077-8234-C42ED48BAC1E</string>
 		</dict>
+		<key>72E2495D-DDF9-4E12-BF33-6815494E62A5</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.PackageLog</string>
+			<key>fileName</key>
+			<string>72E2495D-DDF9-4E12-BF33-6815494E62A5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Add Package</string>
+			<key>timeStartedRecording</key>
+			<real>675552991.32693398</real>
+			<key>timeStoppedRecording</key>
+			<real>675553047.64334404</real>
+			<key>title</key>
+			<string>Add Package</string>
+			<key>uniqueIdentifier</key>
+			<string>72E2495D-DDF9-4E12-BF33-6815494E62A5</string>
+		</dict>
 		<key>E6D47037-5555-42AA-AE14-28628CB7FE84</key>
 		<dict>
 			<key>className</key>
@@ -61,6 +89,34 @@
 			<string>Resolve Packages</string>
 			<key>uniqueIdentifier</key>
 			<string>E6D47037-5555-42AA-AE14-28628CB7FE84</string>
+		</dict>
+		<key>F1C4ED61-1930-4949-AFB4-56555DB568CE</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.PackageLog</string>
+			<key>fileName</key>
+			<string>F1C4ED61-1930-4949-AFB4-56555DB568CE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>Resolve Packages</string>
+			<key>timeStartedRecording</key>
+			<real>675553051.313254</real>
+			<key>timeStoppedRecording</key>
+			<real>675553052.82475197</real>
+			<key>title</key>
+			<string>Resolve Packages</string>
+			<key>uniqueIdentifier</key>
+			<string>F1C4ED61-1930-4949-AFB4-56555DB568CE</string>
 		</dict>
 	</dict>
 </dict>

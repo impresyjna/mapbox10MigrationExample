@@ -21,9 +21,9 @@ class NewMapViewController: UIViewController {
         guard mapView == nil else { return }
         
         mapView = MapView(frame: view.bounds)
-        if let styleUri = StyleURI(rawValue: "mapbox://styles/examples/cke97f49z5rlg19l310b7uu7j") {
-            mapView?.mapboxMap.loadStyleURI(styleUri)
-        }
+//        if let styleUri = StyleURI(rawValue: "mapbox://styles/examples/cke97f49z5rlg19l310b7uu7j") {
+//            mapView?.mapboxMap.loadStyleURI(styleUri)
+//        }
         
         guard let mapView = mapView else { return }
         
