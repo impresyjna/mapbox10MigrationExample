@@ -25,6 +25,10 @@ class OldMapViewController: UIViewController {
         mapView = MGLMapView(frame: self.view.frame)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
+        if let styleUrl = URL(string: "mapbox://styles/examples/cke97f49z5rlg19l310b7uu7j") {
+            mapView?.styleURL = styleUrl
+        }
+        
         guard let mapView = mapView else {
             return
         }
