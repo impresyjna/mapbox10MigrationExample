@@ -34,11 +34,11 @@ class NewMapViewController: UIViewController {
     }
     
     func setupUserLocation() {
-        self.mapView?.location.overrideLocationProvider(with: provider)
-        self.mapView?.location.options.puckType = .puck2D()
-        let cameraOptions = CameraOptions(center: CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate, padding: UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0), zoom: 15.0)
+//        self.mapView?.location.overrideLocationProvider(with: provider)
+        let cameraOptions = CameraOptions(center: CLLocation(latitude: 0, longitude: 0).coordinate, padding: UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0), zoom: 15.0)
         self.mapView?.camera.ease(to: cameraOptions, duration: 0.0)
         self.mapView?.mapboxMap.setCamera(to: cameraOptions)
+        self.mapView?.location.options.puckType = .puck2D()
 //        provider.setDelegate(self)
     }
     

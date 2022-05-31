@@ -35,7 +35,6 @@ class OldMapViewController: UIViewController {
         
         self.view.addSubview(mapView)
         
-        
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .none
         mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 50.6710, longitude: 20.2990)
