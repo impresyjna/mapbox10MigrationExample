@@ -33,14 +33,15 @@ class OldMapViewController: UIViewController {
             return
         }
         
+        self.view.addSubview(mapView)
+        
+        
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .none
         mapView.centerCoordinate = CLLocationCoordinate2D(latitude: 50.6710, longitude: 20.2990)
         
         let mapDefaultCamera = MGLMapCamera.init(lookingAtCenter: CLLocationCoordinate2D(latitude: 50.6710, longitude: 20.2990), altitude: 400, pitch: 0, heading: 0)
         mapView.setCamera(mapDefaultCamera, animated: false)
-        
-        self.view.addSubview(mapView)
     }
 }
 
