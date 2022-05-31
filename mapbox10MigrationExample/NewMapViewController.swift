@@ -85,6 +85,15 @@ extension NewMapViewController: LocationProviderDelegate {
             to: CameraOptions(center: newLocation.coordinate, padding: UIEdgeInsets(top: 400, left: 0, bottom: 0, right: 0), zoom: 15),
             duration: 1.3)
         
+        
+        let location = CLLocation(coordinate: newLocation.coordinate,
+                                  altitude: 0.0,
+                                  horizontalAccuracy: newLocation.horizontalAccuracy,
+                                  verticalAccuracy: 0.0,
+                                  course: newLocation.course,
+                                  speed: 0.0,
+                                  timestamp: Date())
+        
         if case let .courseView(view) = navigationMapView?.userLocationStyle {
             let point = mapView.mapboxMap.point(for: location.coordinate)
             view.center = point
