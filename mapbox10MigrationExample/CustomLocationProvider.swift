@@ -41,7 +41,7 @@ public final class CustomLocationProvider: NSObject {
     }
     
     @objc func newLocation() {
-        currentLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude), altitude: currentLocation.altitude, horizontalAccuracy: currentLocation.horizontalAccuracy, verticalAccuracy: currentLocation.verticalAccuracy, course: currentLocation.course + 1, speed: currentLocation.speed + 1, timestamp: Date())
+        currentLocation = CLLocation(coordinate: CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude + 0.001, longitude: currentLocation.coordinate.longitude), altitude: currentLocation.altitude, horizontalAccuracy: currentLocation.horizontalAccuracy, verticalAccuracy: currentLocation.verticalAccuracy, course: currentLocation.course + 1, speed: currentLocation.speed + 1, timestamp: Date())
 
         locationManager(locationProvider, didUpdateLocations: [currentLocation])
     }
