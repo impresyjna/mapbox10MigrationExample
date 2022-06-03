@@ -16,6 +16,7 @@ class NewMapViewController: UIViewController {
         return navigationMapView?.mapView
     }
     let provider: CustomLocationProvider = CustomLocationProvider()
+    var cameraConsumer: CameraLocationConsumer?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -50,7 +51,12 @@ class NewMapViewController: UIViewController {
         self.mapView?.camera.ease(to: cameraOptions, duration: 0.0)
         self.mapView?.mapboxMap.setCamera(to: cameraOptions)
         self.navigationMapView?.userLocationStyle = .courseView()
-        provider.setDelegate(self)
+        if let navigationMapView = navigationMapView {
+            self.cameraConsumer = CameraLocationConsumer(mapView: navigationMapView)
+            if let cameraConsumer = self.cameraConsumer {
+                mapView?.location.addLocationConsumer(newConsumer: cameraConsumer)
+            }
+        }
     }
     
 //    func trackUser() {
@@ -76,61 +82,4 @@ class NewMapViewController: UIViewController {
 //            self?.trackUser()
 //        }
 //    }
-}
-
-extension NewMapViewController: LocationProviderDelegate {
-    func locationProvider(_ provider: LocationProvider, didUpdateLocations locations: [CLLocation]) {
-        guard let newLocation = locations.first, let mapView = mapView else { return }
-        navigationMapView?.mapView?.camera.ease(
-            to: CameraOptions(center: newLocation.coordinate, padding: UIEdgeInsets(top: 400, left: 0, bottom: 0, right: 0), zoom: 15),
-            duration: 1.3)
-        
-        
-        let location = CLLocation(coordinate: newLocation.coordinate,
-                                  altitude: 0.0,
-                                  horizontalAccuracy: newLocation.horizontalAccuracy,
-                                  verticalAccuracy: 0.0,
-                                  course: newLocation.course,
-                                  speed: 0.0,
-                                  timestamp: Date())
-        
-        if case let .courseView(view) = navigationMapView?.userLocationStyle {
-            let point = mapView.mapboxMap.point(for: location.coordinate)
-            view.center = point
-            view.update(location: location,
-                        pitch: mapView.mapboxMap.cameraState.pitch,
-                        direction: location.course,
-                        animated: true,
-                        navigationCameraState: .idle)
-        }
-    }
-    
-    func cameraOptions(_ location: CLLocation?) -> [String: CameraOptions] {
-        var followingMobileCamera = CameraOptions()
-        followingMobileCamera.center = location?.coordinate
-        // Set the bearing of the `MapView` (measured in degrees clockwise from true north).
-        followingMobileCamera.bearing = 90.0
-        followingMobileCamera.padding = .zero
-        followingMobileCamera.zoom = 15.0
-        followingMobileCamera.pitch = 45.0
-        
-        let cameraOptions = [
-            CameraOptions.followingMobileCamera: followingMobileCamera
-        ]
-        
-        return cameraOptions
-    }
-    
-    
-    func locationProvider(_ provider: LocationProvider, didUpdateHeading newHeading: CLHeading) {
-        
-    }
-    
-    func locationProvider(_ provider: LocationProvider, didFailWithError error: Error) {
-        
-    }
-    
-    func locationProviderDidChangeAuthorization(_ provider: LocationProvider) {
-        
-    }
 }

@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 import MapboxMaps
+import MapboxNavigation
 
 public final class CustomLocationProvider: NSObject {
     private var locationProvider: CLLocationManager
@@ -158,4 +159,49 @@ internal class CustomEmptyLocationProviderDelegate: LocationProviderDelegate {
     func locationProvider(_ provider: LocationProvider, didUpdateHeading newHeading: CLHeading) {}
     func locationProvider(_ provider: LocationProvider, didUpdateLocations locations: [CLLocation]) {}
     func locationProviderDidChangeAuthorization(_ provider: LocationProvider) {}
+}
+
+
+public class CameraLocationConsumer: LocationConsumer {
+    weak var navigationMapView: NavigationMapView?
+    
+    var shouldTrackLocation: Bool {
+        return true
+    }
+    
+    init(mapView: NavigationMapView) {
+        self.navigationMapView = mapView
+    }
+    
+    public func locationUpdate(newLocation: Location) {
+        guard let navigationMapView = navigationMapView else {
+            return
+        }
+
+            navigationMapView.mapView?.camera.ease(
+                to: CameraOptions(center: newLocation.coordinate, zoom: 15.0, bearing: newLocation.course),
+            duration: 1.3)
+        
+        let cameraOptions = self.cameraOptions(newLocation)
+        navigationMapView.navigationCamera.viewportDataSource.delegate?.viewportDataSource(navigationMapView.navigationCamera.viewportDataSource, didUpdate: cameraOptions)
+        
+        if case .courseView = navigationMapView.userLocationStyle {
+            navigationMapView.moveUserLocation(to: newLocation.location, animated: true)
+        }
+    }
+    
+    func cameraOptions(_ location: Location?) -> [String: CameraOptions] {
+        var followingMobileCamera = CameraOptions()
+        followingMobileCamera.center = location?.coordinate
+        followingMobileCamera.bearing = location?.course
+        followingMobileCamera.padding = .zero
+        followingMobileCamera.zoom = 15.0
+        followingMobileCamera.pitch = 0
+        
+        let cameraOptions = [
+            CameraOptions.followingMobileCamera: followingMobileCamera
+        ]
+        
+        return cameraOptions
+    }
 }
