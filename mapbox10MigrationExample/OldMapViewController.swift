@@ -15,6 +15,7 @@ class OldMapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeMapView()
+        showPointAnnotation()
     }
     
     func initializeMapView() {
@@ -25,9 +26,9 @@ class OldMapViewController: UIViewController {
         mapView = MGLMapView(frame: self.view.frame)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-//        if let styleUrl = URL(string: "mapbox://styles/examples/cke97f49z5rlg19l310b7uu7j") {
-//            mapView?.styleURL = styleUrl
-//        }
+        //        if let styleUrl = URL(string: "mapbox://styles/examples/cke97f49z5rlg19l310b7uu7j") {
+        //            mapView?.styleURL = styleUrl
+        //        }
         
         guard let mapView = mapView else {
             return
@@ -43,6 +44,20 @@ class OldMapViewController: UIViewController {
         mapView.setCamera(mapDefaultCamera, animated: false)
         
         mapView.locationManager.stopUpdatingLocation()
+    }
+    
+    func showPointAnnotation() {
+        var pointAnnotations = [MGLPointAnnotation]()
+        let point = MGLPointAnnotation()
+        point.coordinate = CLLocationCoordinate2D(latitude: 50.6710, longitude: 20.2990)
+        point.title = "\(50.6710), \(20.2990)"
+        pointAnnotations.append(point)
+        
+        mapView?.addAnnotations(pointAnnotations)
+    }
+    
+    func showCircleAnnotation() {
+        var circleAnnotations = [MGLCircleStyleLayer]
     }
 }
 

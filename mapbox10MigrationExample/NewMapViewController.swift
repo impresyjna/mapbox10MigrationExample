@@ -21,6 +21,7 @@ class NewMapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeMapView()
+        showPointAnnotation()
     }
     
     func initializeMapView() {
@@ -50,7 +51,7 @@ class NewMapViewController: UIViewController {
         let cameraOptions = CameraOptions(center: CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate, padding: UIEdgeInsets(top: 16.0, left: 16.0, bottom: 16.0, right: 16.0), zoom: 15.0)
         self.mapView?.camera.ease(to: cameraOptions, duration: 0.0)
         self.mapView?.mapboxMap.setCamera(to: cameraOptions)
-        self.navigationMapView?.userLocationStyle = .courseView()
+        self.navigationMapView?.userLocationStyle = .none
         if let navigationMapView = navigationMapView {
             self.cameraConsumer = CameraLocationConsumer(mapView: navigationMapView)
             if let cameraConsumer = self.cameraConsumer {
@@ -82,4 +83,11 @@ class NewMapViewController: UIViewController {
 //            self?.trackUser()
 //        }
 //    }
+    
+    func showPointAnnotation() {
+        var pointAnnotation = PointAnnotation(coordinate: CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate)
+        pointAnnotation.image = .init(image: UIImage(named: "red_pin")!, name: "red_pin")
+        let pointAnnotationManager = mapView?.annotations.makePointAnnotationManager()
+        pointAnnotationManager?.annotations = [pointAnnotation]
+    }
 }
