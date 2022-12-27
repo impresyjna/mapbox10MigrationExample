@@ -15,7 +15,7 @@ class OldMapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeMapView()
-        showPointAnnotation()
+        
     }
     
     func initializeMapView() {
@@ -57,10 +57,32 @@ class OldMapViewController: UIViewController {
     }
     
     func showCircleAnnotation() {
-        var circleAnnotations = [MGLCircleStyleLayer]
+        
+    }
+    
+    func showPoiAsLayer() {
+        let feature = MGLPointFeature()
+        feature.coordinate = CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate
+        feature.attributes = ["name": "image-propertie"]
+        mapView?.style?.setImage(UIImage(named: "red_pin")!, forName: "image-propertie")
+        if let source = mapView?.style?.source(withIdentifier: "poi-source") as? MGLShapeSource {
+            let newShape = MGLShapeCollectionFeature(shapes: [feature])
+            source.shape = newShape
+        } else {
+            let source = MGLShapeSource(identifier:"poi-source", features: [feature], options: nil)
+            mapView?.style?.addSource(source)
+        }
+        guard let sourceNew = mapView?.style?.source(withIdentifier: "poi-source"), mapView?.style?.layer(withIdentifier: "poi-layer") == nil else {
+            return
+        }
+        let poiLayer = MGLSymbolStyleLayer(identifier: "poi-layer", source: sourceNew)
+        poiLayer.iconImageName = NSExpression(forConstantValue: "{name}")
+        mapView?.style?.addLayer(poiLayer)
     }
 }
 
 extension OldMapViewController: MGLMapViewDelegate {
-    
+    func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
+        showPoiAsLayer()
+    }
 }

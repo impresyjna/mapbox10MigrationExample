@@ -21,7 +21,6 @@ class NewMapViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         initializeMapView()
-        showPointAnnotation()
     }
     
     func initializeMapView() {
@@ -43,6 +42,10 @@ class NewMapViewController: UIViewController {
         view.addSubview(navigationMapView)
         
         setupUserLocation()
+        
+        mapView?.mapboxMap.onEvery(.mapLoaded, handler: { [weak self] _ in
+            self?.showPoiAsLayer()
+        })
     }
     
     func setupUserLocation() {
@@ -89,5 +92,37 @@ class NewMapViewController: UIViewController {
         pointAnnotation.image = .init(image: UIImage(named: "red_pin")!, name: "red_pin")
         let pointAnnotationManager = mapView?.annotations.makePointAnnotationManager()
         pointAnnotationManager?.annotations = [pointAnnotation]
+    }
+    
+    func showCircleAnnotation() {
+        var circleAnnotation = CircleAnnotation(centerCoordinate: CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate)
+        circleAnnotation.circleRadius = 100
+        circleAnnotation.circleColor = .init(.red)
+        let circleAnnotationManager = mapView?.annotations.makeCircleAnnotationManager()
+        circleAnnotationManager?.annotations = [circleAnnotation]
+    }
+    
+    func showPolygonAnnotation() {
+        let polygon = Polygon(center: CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate, radius: 1000.0, vertices: 64) // Radius is in meters
+        
+        var polygonAnnotation = PolygonAnnotation(polygon: polygon)
+        polygonAnnotation.fillColor = StyleColor(UIColor.blue.withAlphaComponent(0.3))
+        
+        let polygonAnnotationManager = mapView?.annotations.makePolygonAnnotationManager()
+        
+        polygonAnnotationManager?.annotations = [polygonAnnotation]
+    }
+    
+    func showPoiAsLayer() {
+        var feature = Feature(geometry: .point(Point(CLLocation(latitude: 50.6710, longitude: 20.2990).coordinate)))
+        feature.properties = ["name": .string("image-propertie")]
+        try? mapView?.mapboxMap.style.addImage(UIImage(named: "red_pin")!, id: "image-propertie")
+        var source = GeoJSONSource()
+        source.data = .featureCollection(FeatureCollection(features: [feature]))
+        try? mapView?.mapboxMap.style.addSource(source, id: "poi-source")
+        var poiLayer = SymbolLayer(id: "poi-layer")
+        poiLayer.source = "poi-source"
+        poiLayer.iconImage = .constant(.name("{name}"))
+        try? mapView?.mapboxMap.style.addLayer(poiLayer)
     }
 }
